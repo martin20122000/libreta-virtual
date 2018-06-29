@@ -1,0 +1,60 @@
+<input id="nombre1" placeholder="Ingrese su nombre y apellido" ></input>
+<script>
+    var alumnos=["franco","martin"]
+    var a=-1
+  
+    var matematica=new Array()
+    var ciudadania=new Array()
+    var filosofia=new Array()
+    var lengua=new Array()
+    var quimica=new Array()
+    var form_cristiana=new Array()
+    var dsi=new Array()
+    var fpvyt=new Array()
+    var aplicaciones=new Array()
+    var comunicaciones=new Array()
+    var teatro=new Array()
+    var programacion=new Array()
+
+    var cantmate=0
+    var notamate=0
+    var promediomate=0
+    document.onkeydown = function(e) {
+    if (e.keyCode==13){
+        var nombre1=document.getElementById("nombre1").value
+    while (a<alumnos.length){
+        a=a+1
+        if (nombre1===alumnos[a]){
+        var materia= prompt("Ingrese la materia para ingresar sus calificaciones")
+        if (materia==="matematica"){
+          
+            matematica.push(prompt("Ingrese nota"))
+         cantmate=cantmate+1
+            notamate=parseInt(notamate)+parseInt( matematica[matematica.length-1])
+           promediomate=notamate/cantmate
+           alert("tus notas en "+ materia +" son:"+matematica)
+           alert("Tu promedio es: "+promediomate.toFixed(2))
+        var falta=parseInt((cantmate+1)*6)-parseInt(notamate)
+        alert("Para aprobar necesitas un: "+falta.toFixed(2))
+            a=-1
+        }
+        if (materia==="ciudadania"){
+            ciudadania.push(prompt("Ingrese nota"))
+            alert("tus notas en "+ materia +" son:"+ciudadania)
+            a=-1
+        }
+        if (materia==="filosofia"){
+           filosofia.push(prompt("Ingrese nota"))
+            alert("tus notas en "+ materia +" son:"+filosofia)
+            a=-1
+        }
+        if (materia==="lengua"){
+            lengua.push(prompt("Ingrese nota"))
+            alert("tus notas en "+ materia +" son:"+lengua)
+            a=-1
+        }
+    }
+    }
+    }
+    }
+</script>
